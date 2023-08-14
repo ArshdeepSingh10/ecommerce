@@ -7,7 +7,7 @@ const Login = () => {
   // const [show , setShow] = useState(false);
   // const [userdata , setUserdata] = useState({})
     const api = axios.create({
-      baseURL : "http://localhost:8000",
+      baseURL : "https://backend-pied-phi.vercel.app",
       withCredentials : true
     })
  const [password, setPassword] = useState("");
