@@ -48,7 +48,7 @@ const Productcol = () => {
 console.log(selectedProducts);
   const getproduct = async() =>{
    try{
-    const res = await axios.get("http://localhost:8000/admin/products");
+    const res = await axios.get("https://backend-pied-phi.vercel.app/products");
    const products = res.data;
    setProduct(products);
    }
