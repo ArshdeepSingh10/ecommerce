@@ -50,6 +50,7 @@ console.log(selectedProducts);
    try{
     const res = await axios.get("https://backend-pied-phi.vercel.app/products");
    const products = res.data;
+     console.log(res.data)
    setProduct(products);
    }
    catch(err){
