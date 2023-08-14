@@ -11,7 +11,7 @@ const Logedin = () => {
 // serOrder(orders);
 
   const api = axios.create({
-    baseURL: "http://localhost:8000",
+    baseURL: "https://ecommerce-orcin-three.vercel.app",
     withCredentials: true,
   });
 
