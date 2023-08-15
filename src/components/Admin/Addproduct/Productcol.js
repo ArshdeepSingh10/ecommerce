@@ -48,7 +48,7 @@ const Productcol = () => {
 console.log(selectedProducts);
   const getproduct = async() =>{
    try{
-    const res = await axios.get("https://backend-pied-phi.vercel.app/products");
+    const res = await axios.get("https://backend-pied-phi.vercel.app/admin/products");
    const products = res.data;
      console.log(res.data)
    setProduct(products);
@@ -76,7 +76,7 @@ const getDeleted = async() =>{
 
   try {
     const selectedProductIds =selectedProducts.join(',');
-    const res = await axios.delete(`https://backend-pied-phi.vercel.app/products?ids=${selectedProductIds}`);
+    const res = await axios.delete(`https://backend-pied-phi.vercel.app/admin/products?ids=${selectedProductIds}`);
     console.log(res.data);
   } catch (err) {
     console.log(err);
@@ -90,7 +90,7 @@ const getDisable = async(status) =>{
     }
 
     const selectedProductIds= selectedProducts.join(',');
-    const res = await axios.patch(`https://backend-pied-phi.vercel.app/products?ids=${selectedProductIds}&status=${status}`);
+    const res = await axios.patch(`https://backend-pied-phi.vercel.app/admin/products?ids=${selectedProductIds}&status=${status}`);
     console.log(res.data);
   } catch (err) {
     console.log(err);
