@@ -62,12 +62,12 @@ const formsubmit = async(e) =>{
 
 }
   return (
-    <div className="md:container md:mx-auto  h-screen">
+    <div className="md:container md:mx-auto px-20  h-screen">
       <div>
         <p className="p-4">Home/Login</p>
       </div>
       <div className={`flex justify-center `}  >
-        <div className="bg-white w-2/5 p-10 shadow-2xl">
+        <div className="bg-white w-2/5 md:p-10 shadow-2xl">
           <div className="text-center p-2">
             <h1 className="text-3xl font-medium ">Login</h1>
           </div>
