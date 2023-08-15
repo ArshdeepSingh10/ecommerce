@@ -44,7 +44,7 @@ const formsubmit = async(e) =>{
     // });
     const admail = "demo@gmail.com";
     const pass = '12345678'
-    if((email === admail) && password === pass){
+    if((email === admail) && (password === pass)){
       navigate('/admin');
     return;
     }
