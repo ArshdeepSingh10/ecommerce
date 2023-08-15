@@ -67,7 +67,7 @@ const formsubmit = async(e) =>{
         <p className="p-4">Home/Login</p>
       </div>
       <div className={`flex justify-center `}  >
-        <div className="bg-white w-2/5 p-10 shadow-2xl">
+        <div className="bg-white md:w-2/5 p-10 shadow-2xl">
           <div className="text-center p-2">
             <h1 className="text-3xl font-medium ">Login</h1>
           </div>
