@@ -18,7 +18,7 @@ const Product = () => {
   const gets = async () => {
     try {
       
-      const res = await axios.get(`http://localhost:8000/${category}/${proid}`);
+      const res = await axios.get(`https://backend-pied-phi.vercel.app/${category}/${proid}`);
       const products = res.data;
       const foundProduct = products.find((val) => val._id === proid);
       const othervarient = products.filter((val) => (val.category === foundProduct.category));
