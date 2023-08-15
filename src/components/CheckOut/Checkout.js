@@ -21,7 +21,7 @@ const Checkout = () => {
   const navigate = useNavigate();
   const get = async() =>{
    try{
-    const res = await axios.get("http://localhost:8000/checkout",{
+    const res = await axios.get("https://backend-pied-phi.vercel.app/checkout",{
       withCredentials: true,
     })
     if (res.status === 200) {
