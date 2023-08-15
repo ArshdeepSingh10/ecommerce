@@ -55,7 +55,10 @@ catch(error){
 const deletetoken = async() =>{
   try {
     const res = await api.get("https://backend-pied-phi.vercel.app/account?clearToken=true");
-    navigate("/login"); // Navigate to login regardless of response status
+    if(res === "Token cookie deleted"){
+      navigate("/login");
+    }
+    
   } catch (error) {
     console.error(error);
     navigate("/login"); // Navigate to login in case of any error
