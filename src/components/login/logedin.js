@@ -25,7 +25,7 @@ if(res.status ===200){
 //  const email =  res.data.email;
 //  const name =  res.data.name;
 const user ={
- email :  res.data.userData.email,
+ email : res.data.userData.email,
  name : res.data.userData.name
 
 }
