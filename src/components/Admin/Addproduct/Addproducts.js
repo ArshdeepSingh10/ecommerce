@@ -36,7 +36,7 @@ const Addproducts = () => {
 
    
     try{
-       await axios.post("http://localhost:8000/admin",formData);
+       await axios.post("https://backend-pied-phi.vercel.app/admin",formData);
 alert("is add")
     }
     catch(error){
