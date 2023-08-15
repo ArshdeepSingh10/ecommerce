@@ -55,13 +55,10 @@ catch(error){
 const deletetoken = async() =>{
   try {
     const res = await api.get("/account?clearToken=true");
-   
-    
-    
-    
+     navigate("/login")
   } catch (error) {
     console.error(error);
-   // Navigate to login in case of any error
+   navigate("/login");
   }
 }
 useEffect(() =>{
