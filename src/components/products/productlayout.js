@@ -157,7 +157,7 @@ const Productlayout = () => {
       <div className=" bg-blue-500 shadow-lg p-3 rounded-full" onClick={showFilter} type="button">
       <FaFilter />
       </div>
-      /* Inline styles within the component */
+     
 
       </div>
       {/* ---------------------------------------------- filter button -------------------------------------- */}
