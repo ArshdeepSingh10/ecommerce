@@ -136,7 +136,7 @@ const Productlayout = () => {
         </div>
         {/* Description */}
         <div>
-          <Link to={`/${category}/${val._id}`}><h1 className="font-semibold">{val.brand + " " + val.name}</h1></Link>
+          <Link to={`/${category}/${val._id}`}><h1 className="text-sm md:text-lg font-semibold">{val.brand + " " + val.name}</h1></Link>
           <p>₹{val.price}</p>
         </div>
       </div>
