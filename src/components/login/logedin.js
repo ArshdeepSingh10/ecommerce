@@ -61,7 +61,7 @@ const deletetoken = async() =>{
     
   } catch (error) {
     console.error(error);
-    navigate("/login"); // Navigate to login in case of any error
+   // Navigate to login in case of any error
   }
 }
 useEffect(() =>{
