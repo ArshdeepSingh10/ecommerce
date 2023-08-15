@@ -56,7 +56,7 @@ const deletetoken = async() =>{
   try {
     const res = await api.get("/account?clearToken=true");
    
-      navigate("/login");
+    
     
     
   } catch (error) {
