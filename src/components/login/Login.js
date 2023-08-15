@@ -62,7 +62,7 @@ const formsubmit = async(e) =>{
 
 }
   return (
-    <div className="md:container md:mx-auto md:px-20 h-screen">
+    <div className="md:container md:mx-auto md:px-20 px-2 h-screen">
       <div>
         <p className="p-4">Home/Login</p>
       </div>
