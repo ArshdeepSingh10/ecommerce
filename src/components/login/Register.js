@@ -33,7 +33,7 @@ const Register = () => {
       };
 
       try{
-        const res = await axios.post("http://localhost:8000/logins",data);
+        const res = await axios.post("https://backend-pied-phi.vercel.app/logins",data);
         alert( res.data.message + "dfsd")
         navigate("/login")
     }catch(err){
