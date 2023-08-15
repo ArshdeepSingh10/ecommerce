@@ -33,7 +33,7 @@ const Addproducts = () => {
     formData.append("color", color);
     formData.append("size", size);
     formData.append("status", "enable");
-
+console.log(formData);
    
     try{
        await axios.post("https://backend-pied-phi.vercel.app/admin",formData);
