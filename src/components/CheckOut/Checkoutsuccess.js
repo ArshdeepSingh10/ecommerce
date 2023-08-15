@@ -12,7 +12,7 @@ console.log(formData);
 const formsubmit = async() =>{
  sessionStorage.clear('cartItems');
 
-  const res =  await axios.post("http://localhost:8000/checkout",formDatas);
+  const res =  await axios.post("https://backend-pied-phi.vercel.app/checkout",formDatas);
   console.log(res);
 }
   const handleBillingMethodChange = (e) => {
