@@ -54,7 +54,7 @@ catch(error){
 
 const deletetoken = async() =>{
   try {
-    const res = await api.get("https://backend-pied-phi.vercel.app/account?clearToken=true");
+    const res = await api.get("/account?clearToken=true");
    
       navigate("/login");
     
