@@ -45,7 +45,7 @@ const Order = () => {
   console.log(selectedProducts);
     const getorder = async() =>{
      try{
-      const res = await axios.get("https://ecommerce-orcin-three.vercel.app/admin/order");
+      const res = await axios.get("https://backend-pied-phi.vercel.app/admin/order");
      const orders = res.data;
      console.log(orders);
      setOrder(orders);
