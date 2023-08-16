@@ -37,6 +37,8 @@ console.log(formData);
 console.log(image);
    
     try{
+   
+
        await axios.post("https://backend-pied-phi.vercel.app/admin",formData);
 alert("is add")
     }
