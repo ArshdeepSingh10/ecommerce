@@ -22,7 +22,7 @@ const Sidenav = () => {
               <li className="p-2">
                 <div className="flex gap-2">
                   <FaBoxArchive />
-                  <p> <Link to="/admin">New Product</Link> </p>
+                  <p> <Link to="/admin/products/a">New Product</Link> </p>
                 </div>
               </li>
             </ul>
