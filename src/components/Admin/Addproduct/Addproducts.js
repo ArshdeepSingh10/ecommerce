@@ -27,9 +27,9 @@ const Addproducts = () => {
     formData.append("quantity", quantity);
     formData.append("category", category);
      formData.append("sku", sku);
-    // image.forEach((images) => {
-    //   formData.append("image", images);
-    // });
+    image.forEach((images) => {
+      formData.append("image", images);
+    });
     formData.append("color", color);
     formData.append("size", size);
     formData.append("status", "enable");
