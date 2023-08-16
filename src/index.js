@@ -38,7 +38,7 @@ root.render(
             <Route path="/:category/:proid" element={<Product />} />
             <Route path ="/checkout/contiueshoping" element ={<Countinueshopping/>}></Route>
           </Route>
-          <Route path="/admin/products/a" element={<Admin />} >
+          <Route path="/admin" element={<Admin />} >
             <Route index element={<Addproducts/>} />
             <Route path="/admin/products" element={<Productcol/>} />
             <Route path="/admin/order" element={<Order/>} />
