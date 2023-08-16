@@ -39,7 +39,7 @@ root.render(
             <Route path ="/checkout/contiueshoping" element ={<Countinueshopping/>}></Route>
           </Route>
           <Route path="/admin" element={<Admin />} >
-            <Route index element={<Addproducts/>} />
+            <Route index path="/admin/products/a" element={<Addproducts/>} />
             <Route path="/admin/products" element={<Productcol/>} />
             <Route path="/admin/order" element={<Order/>} />
           </Route>
