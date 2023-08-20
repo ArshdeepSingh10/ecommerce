@@ -92,8 +92,7 @@ useEffect(() =>{
            
     <td className="p-4 flex " >
    
-     
-      <div className='flex gap-4 '>
+   <div className='flex gap-4 '>
          <div className="">
         <img src={val1.image[index1]} className="h-20 border border-gray-300 rounded-md"/>
      <div>
