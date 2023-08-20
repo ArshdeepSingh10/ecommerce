@@ -8,9 +8,9 @@ const App = () => {
       <Nav/>
 <Outlet></Outlet>
 
-     <Link to ="admin"><h1 className="text-lg block bottom-0 text-center bg-slate-100 font-bold  shadow-inner  p-4">
+     <a href="https://www.linkedin.com/in/arshdeep-singh-0779b5254/"><h1 className="text-lg block bottom-0 text-center bg-slate-100 font-bold  shadow-inner  p-4">
    <Footer></Footer>
-    </h1></Link> 
+    </h1></a> 
    
     </div>
   )
