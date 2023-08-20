@@ -98,9 +98,9 @@ formSubmitCallback()
   return (
     <div>
    
-<div className=" bg-gray-100 ">
+<div className=" bg-gray-100 w-full">
 
-      <div className="p-14 row-span-full col-span-full">
+      <div className="p-14 row-span-full">
            <div className="flex"> 
        <button className="p-2 m-2 rounded border-[1px] border-black hover:bg-white bg-gray-200"><FaArrowLeft/></button><h1 className="py-3">Create A New Product</h1>
            </div>
