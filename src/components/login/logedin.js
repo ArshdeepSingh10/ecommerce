@@ -114,7 +114,7 @@ useEffect(() =>{
      
       </React.Fragment>
     ))}
-       <td className="font-bold">
+       <td className="font-bold text-top text-nowarp">
     Total: {val.totalprice}
       </td>
       <td>
