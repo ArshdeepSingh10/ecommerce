@@ -70,7 +70,7 @@ useEffect(() =>{
     <div>
       <p className="p-4">Home/Account Details</p>
     </div>
-      <div>
+      <div className ='flex gap-4'>
         <div>
             <p className='text-center text-4xl py-5'>
                 My Account
