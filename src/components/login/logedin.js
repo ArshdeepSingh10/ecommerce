@@ -77,7 +77,7 @@ useEffect(() =>{
             </p>
         </div>
         <div className='grid grid-cols-12 gap-6'>
-            <div className=' col-span-8'>
+            <div className='col-span-12 md:col-span-8'>
                 {/* ----------------------------------------  */}
                <div className='border-b border-black'>
                 <p className='text-3xl'>Order History</p>
@@ -127,7 +127,7 @@ useEffect(() =>{
             </div>
 
 
-            <div className='col-span-4'>
+            <div className=' col-span-12 md:col-span-4'>
 <div className=''>
   <div className='flex gap-20 border-b border-black '>
   <p className='text-3xl'>Account Details</p>
