@@ -90,11 +90,11 @@ useEffect(() =>{
     {val.cart.map((val1 , index1) =>(
         <React.Fragment> 
            
-    <td className="p-4">
+    <td className="p-4 flex " >
    
      
       
-         <div className="flex gap-4 "></div>
+         <div className="flex gap-4 ">
         <img src={val1.image[index1]} className="h-20 border border-gray-300 rounded-md"/>
      <div>
       <p className=" font-bold">
