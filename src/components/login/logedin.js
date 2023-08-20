@@ -86,9 +86,10 @@ useEffect(() =>{
                    
 {order.map((val , index) =>(
   <table className="w-full ">
+  <tr key={index}className="border-b border-gray-300" >
     {val.cart.map((val1 , index1) =>(
         <React.Fragment> 
-           <tr key={index}className="border-b border-gray-300" >
+           
     <td className="p-4">
    
      
@@ -116,16 +117,17 @@ useEffect(() =>{
     //   <td>
     //   {val.date}
     //   </td>
-      </tr>
+     
      
       </React.Fragment>
- <td className="font-bold">
+    ))}
+       <td className="font-bold">
     Total: {val.totalprice}
       </td>
       <td>
       {val.date}
       </td>
-    ))}
+       </tr>
  </table>
 ))}
                   
