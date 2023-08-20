@@ -115,10 +115,10 @@ useEffect(() =>{
       </React.Fragment>
     ))}
        <td className="font-bold">
-    <div>Total: {val.totalprice}</div>
+    <div className= "w-full">Total: {val.totalprice}</div>
       </td>
       <td>
-     <div> {val.date}</div>
+     <div className= "w-full"> {val.date}</div>
       </td>
        </tr>
  </table>
