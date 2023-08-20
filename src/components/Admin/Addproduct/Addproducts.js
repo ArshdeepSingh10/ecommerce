@@ -98,7 +98,7 @@ formSubmitCallback()
   return (
     <div>
    
-<div className=" bg-gray-100 w-full">
+<div className=" bg-gray-100">
 
       <div className="p-14 row-span-full">
            <div className="flex"> 
