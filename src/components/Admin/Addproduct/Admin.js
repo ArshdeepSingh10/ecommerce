@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom'
 const Admin = () => {
   return (
     <div>
-      <Adminnav/>
+  
     <Sidenav></Sidenav>
     <Outlet></Outlet>
     </div>
