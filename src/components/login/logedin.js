@@ -77,7 +77,7 @@ useEffect(() =>{
             </p>
         </div>
         <div className='grid grid-cols-12 gap-6'>
-            <div className='col-span-12 order-last md:col-span-8'>
+            <div className='col-span-12 md:order-none  order-last md:col-span-8'>
                 {/* ----------------------------------------  */}
                <div className='border-b border-black'>
                 <p className='text-3xl'>Order History</p>
