@@ -111,12 +111,7 @@ useEffect(() =>{
      </div>
      
     </td>
-    // <td className="font-bold">
-    // Total: {val.totalprice}
-    //   </td>
-    //   <td>
-    //   {val.date}
-    //   </td>
+  
      
      
       </React.Fragment>
