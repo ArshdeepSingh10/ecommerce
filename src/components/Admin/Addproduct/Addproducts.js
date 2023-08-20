@@ -108,7 +108,7 @@ formSubmitCallback()
 
         {/*--------------------------- Addproducts columns---------------------------- */}
         <div className="grid grid-cols-12 gap-4 ">
-<div className="bg-white rounded-md shadow col-span-8">
+<div className="bg-white rounded-md shadow col-span-12 md:col-span-8">
  
         <div className="m-1">
           <p className="p-3 font-bold">General</p>
@@ -219,7 +219,7 @@ formSubmitCallback()
           </form>
         </div>
       </div>{/*general */}
-      <div className="col-span-4">
+      <div className=" col-span-12 md:col-span-4">
 {/* ====================================== */}
 
 <div className="bg-white p-5 rounded-md w-full mb-2">
