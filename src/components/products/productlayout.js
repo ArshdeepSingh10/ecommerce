@@ -380,14 +380,15 @@ const [loader , setLoader]=useState(true);
 
 
   {loader ? Array.from({length:12} ,()=>(
-<div>        
-                           <div  className="object-contain bg-slate-400 h-40 max-w-[188px] "></div>
-                                     
-                                    
-                                     <h2 className="bg-slate-400  rounded h-2.5 w-20"></h2>
-                                     <h2 className="bg-slate-400 rounded h-2.5 w-5"></h2>
-                                  
-   </div>     
+    <div className="shadow-lg px-4 py-2 rounded-lg animate-pulse">
+    {/* Image skeleton */}
+    <div className="shadow-sm w-32 h-32 bg-gray-300"></div>
+    {/* Description skeleton */}
+    <div className="mt-2">
+      <div className="w-2/3 h-4 bg-gray-300"></div>
+      <div className="w-1/2 h-4 mt-1 bg-gray-300"></div>
+    </div>
+  </div>
                       
                                   )) : products.length > 0 ? (
     show
