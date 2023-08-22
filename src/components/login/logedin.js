@@ -82,11 +82,11 @@ useEffect(() =>{
             </p>
         </div>
         <div className='grid grid-cols-12 gap-6'>
-           {loading? (
+           {loading ? (
            <div className="flex justify-center items-center h-screen">
-        lod
-      </div>
-        ) : (  <div className='col-span-12 md:order-none  order-last md:col-span-8'>
+          <FaSpinner className="animate-spin text-gray-600 w-10 h-10" />
+            </div>
+        ) : (<>  <div className='col-span-12 md:order-none  order-last md:col-span-8'>
                 {/* ----------------------------------------  */}
                <div className='border-b border-black'>
                 <p className='text-3xl'>Order History</p>
@@ -158,7 +158,8 @@ useEffect(() =>{
     </p>
 </div>
 </div>
-            </div>)}
+            </div>
+          </>)}
         </div>
       </div>
     </div>
