@@ -94,75 +94,91 @@ const [cartVisibilities, setCartVisibilities] = useState(carts.map(() => false))
       </div>
 
 {/* ------------------------------------------------ main product card start ------------------------------- */}
-      <div className='grid grid-cols-12 gap-4 '>
-        {/*------------------------------- image side ----------------------------- */}
-      <div className='col-span-12 md:col-span-6 ' >
-{/*------------------------------------------ image div ----------------------------------------- */}
-<div className='  ' id={product._id}>
-<img src= {!product.image ? "": coverimg} alt='nike shoes' className='object-contain' />
-<h1></h1>
-</div>
-<div className='flex pe-32 py-4 gap-5'>
-    {!product.image ? " ":  product.image.map((image , index) =>(
-        <div key={index}>
-        <img src={image} onClick={()=>(changeimage(image))}  className='object-fill' />
+<div className='grid grid-cols-12 gap-4 '>
+  {/*------------------------------- image side ----------------------------- */}
+  <div className='col-span-12 md:col-span-6'>
+    {/*------------------------------------------ image div ----------------------------------------- */}
+    <div className='  ' id={product._id}>
+      {isLoading ? (
+        <div className="text-center">
+          <div role="status">
+            <svg
+              aria-hidden="true"
+              className="inline w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              viewBox="0 0 100 101"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* ... SVG Path data ... */}
+            </svg>
+            <span className="sr-only">Loading...</span>
+          </div>
+        </div>
+      ) : (
+        <img src={!product.image ? "" : coverimg} alt='nike shoes' className='object-contain' />
+      )}
+      <h1></h1>
     </div>
-
-    ))}
-    
+    <div className='flex pe-32 py-4 gap-5'>
+      {!isLoading &&
+        product.image &&
+        product.image.map((image, index) => (
+          <div key={index}>
+            <img src={image} onClick={() => changeimage(image)} className='object-fill' />
+          </div>
+        ))}
+    </div>
   </div>
-      </div>
-      {/*------------------------------------------- product detail ----------------(----------- */}
-      <div className='col-span-12 md:col-span-6 '>
-      <div className=' m-5 leading-loose'>
-{/*------------------------------------------------ detail ---------------------------------------------------- */}
-        <div>
-<h1 className='text-3xl text-left'>{product.brand + " " +product.name}</h1>
-
-<h5>${product.price}</h5>
-<p className='text-grey-500'>
-Sku: {product.sku}
-</p>
-
+  {/*------------------------------------------- product detail ----------------(----------- */}
+  <div className='col-span-12 md:col-span-6'>
+    <div className=' m-5 leading-loose'>
+      {/*------------------------------------------------ detail ---------------------------------------------------- */}
+      <div>
+        <h1 className='text-3xl text-left'>{product.brand + " " + product.name}</h1>
+        <h5>${product.price}</h5>
+        <p className='text-grey-500'>
+          Sku: {product.sku}
+        </p>
         {/* </div> */}
         {/* ---------------------------------- input -------------------------------- */}
         <div className='py-2'>
-<input className='form-input rounded w-2/12' type='Number' value={quantity}  onChange={(e) => setQuantity(parseInt(e.target.value))} />
+          <input className='form-input rounded w-2/12' type='Number' value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} />
         </div>
         {/* ------------------------------ add to card button ------------------------------------------------------- */}
-<div className='py-2 '>
-    <button className='border-2 bg-white p-1 w-full border-black hover:bg-gray-900 hover:text-white'  onClick={atc}>
-        Add To Card
-    </button>
-</div>
-{/* -------------------------------different size ---------------------------------------------------- */}
-<div className='py-2 text-sm'>
-    <div className='flex py-1 gap-2'>
-       {varint.map((val) => ( <div className='border-2 p-1 px-3 rounded'  onClick={()=>(change("size",  val.size))}>
-            <h1>{val.size}</h1>
-        </div>))}
-    </div>
-    {/* ----------------------------------- color--------------------- */} 
-     <div className='flex py-1 gap-2'>
-    {varint.map((val) => ( <div className='border-2 p-1 px-3 rounded' >
-            <h1 onClick={()=>(change("color" , val.color))}>{val.color}</h1>
-        </div>))}
-    </div>
-    
-</div>
-{/*------------------------------------------------- paragraph ---------------------------------------------- */}
-<div className='text-lg leading-relaxed'>
-<p>
-  {product.name}
-</p>
-</div>
-
-</div>
+        <div className='py-2 '>
+          <button className='border-2 bg-white p-1 w-full border-black hover:bg-gray-900 hover:text-white' onClick={atc}>
+            Add To Card
+          </button>
+        </div>
+        {/* -------------------------------different size ---------------------------------------------------- */}
+        <div className='py-2 text-sm'>
+          <div className='flex py-1 gap-2'>
+            {varint.map((val) => (
+              <div className='border-2 p-1 px-3 rounded' onClick={() => (change("size", val.size))}>
+                <h1>{val.size}</h1>
+              </div>
+            ))}
+          </div>
+          {/* ----------------------------------- color--------------------- */}
+          <div className='flex py-1 gap-2'>
+            {varint.map((val) => (
+              <div className='border-2 p-1 px-3 rounded'>
+                <h1 onClick={() => (change("color", val.color))}>{val.color}</h1>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/*------------------------------------------------- paragraph ---------------------------------------------- */}
+        <div className='text-lg leading-relaxed'>
+          <p>
+            {product.name}
+          </p>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
 
-
-
-      </div>
       
 
   
