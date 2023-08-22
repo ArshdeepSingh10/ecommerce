@@ -9,8 +9,10 @@ const Nav = () => {
   const [icon , setIcone] = useState(<FaBars/>)
   const [carts , setCarts] = useState(0);
   const items = useSelector((state) => (state.cart.items));
+  
+  const cartData = sessionStorage.getItem('cartItems');
+    const cart = JSON.parse(cartData);
  
-
   const done = () =>{
 if(show) {
   setIcone(<FaXmark />);
@@ -22,9 +24,9 @@ if(show) {
 setShow(!show);
   }
   useEffect(() => {
-    const c = items.length;
+    const c = cart.length;
     setCarts(c);
-  },[items]);
+  },[cartData]);
   return (
     <div className="z-50 sticky top-0 bg-white">
       
