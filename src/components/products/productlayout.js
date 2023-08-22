@@ -383,15 +383,11 @@ const [loader , setLoader]=useState(true);
   <>
       <div role="status" className="animate-pulse shadow-lg px-4 py-2 rounded-lg">
         <div className="shadow-sm">
-          <img
-            src={val.image[0]}
-            className="object-cover"
-            alt="nike image"
-          />
+         
         </div>
         <div>
-<h1 className="text-sm md:text-lg font-semibold">{val.brand + " " + val.name}</h1>
-          <p>₹{val.price}</p>
+<h1 className="text-sm md:text-lg font-semibold"></h1>
+          <p></p>
         </div>
       </div>
     </>
