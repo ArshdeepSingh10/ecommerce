@@ -6,12 +6,15 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [show , setShow] = useState(true)
+  
   const [icon , setIcone] = useState(<FaBars/>)
   const [carts , setCarts] = useState(0);
  const items = useSelector((state) => (state.cart.items));
  const quantity = items.map((item) => item.quantity);
 
-
+const handleCategoryClick = () => {
+    setShow(false); // Hide the menu bar when a category link is clicked
+  };
   const done = () =>{
 if(show) {
   setIcone(<FaXmark />);
@@ -41,9 +44,9 @@ useEffect(() => {
         </div> 
         <div className={` absolute left-0 md:relative md:top-0  top-16 w-full md:w-auto bg-white md:border-0 border-t-2 border-b-2 border-gray-500   ${show ?'transition-transform md:scale-100 scale-0  ' :'scale-x-100 duration-500  ease-out-in delay-100'}       `} >
           <ul className="md:flex md:justify-center ">
-          <Link to='/kids'> <li className="p-2 ">Kids</li></Link>
-          <Link to='/men'> <li className="p-2 ">Men</li></Link>
-          <Link to='/women'> <li className="p-2 ">Women</li></Link>
+          <Link to='/kids' onClick={handleCategoryClick}> <li className="p-2 ">Kids</li></Link>
+          <Link to='/men' onClick={handleCategoryClick}> <li className="p-2 ">Men</li></Link>
+          <Link to='/women' onClick={handleCategoryClick}> <li className="p-2 ">Women</li></Link>
           </ul>
         </div>
         <div className="flex gap-3 flex-row-reverse md:px-6">
