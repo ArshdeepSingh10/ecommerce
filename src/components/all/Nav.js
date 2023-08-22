@@ -8,8 +8,8 @@ const Nav = () => {
   const [show , setShow] = useState(true)
   const [icon , setIcone] = useState(<FaBars/>)
   const [carts , setCarts] = useState(0);
-  const items = useSelector((state) => state.cart);
- const quantity = items.map((item) => item.qty);
+ const items = useSelector((state) => (state.cart.items));
+ const quantity = items.map((item) => item.quantity);
 
 
   const done = () =>{
