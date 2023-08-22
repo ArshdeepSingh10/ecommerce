@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const homeproductcard = () => {
   return (
     < >
@@ -22,7 +22,7 @@ const homeproductcard = () => {
                 waterproof + antimicrobial linings, and more.
               </p>
 
-              <button className="p-1 bg-black text-white">SHOP KIDS</button>
+              <Link to="/kids"> <button className="p-1 bg-black text-white cursor-pointer">SHOP KIDS</button></Link>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ const homeproductcard = () => {
                 waterproof + antimicrobial linings, and more.
               </p>
 
-              <button className="p-1 bg-black text-white">SHOP MEN</button>
+            <Link to="/men"><button className="p-1 bg-black text-white cursor-pointer">SHOP MEN</button></Link>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ const homeproductcard = () => {
                 waterproof + antimicrobial linings, and more.
               </p>
 
-              <button className="p-1 bg-black text-white">SHOP WOMEN</button>
+              <Link to="/women"><button className="p-1 bg-black text-white cursor-pointer">SHOP WOMEN</button></Link>
             </div>
           </div>
         </div>
