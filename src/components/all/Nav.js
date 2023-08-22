@@ -23,7 +23,10 @@ if(show) {
 
 setShow(!show);
   }
-
+  useEffect(() => {
+    const c = cartData.length;
+    setCarts(c);
+  },[cartData]);
   return (
     <div className="z-50 sticky top-0 bg-white">
       
