@@ -14,7 +14,7 @@ const Productlayout = () => {
   threshold: 0.4, // Adjust the threshold as needed
 };
   const [searchQuery, setSearchQuery] = useState("");
-
+const [loader , setLoader]=useState(true);
   
   const { category } = useParams();
   const [barshow, setBarshow] = useState(true);
@@ -120,8 +120,12 @@ const Productlayout = () => {
   };
 
   useEffect(() => {
-    dispatch(fetchProducts(category));
-  }, [category]);
+  dispatch(fetchProducts(category))
+    .then(() => {
+      setLoader(false); // Products are loaded, set isLoading to false
+    });
+}, [category]);
+
 
   const show = handleSearch().map((val) => (
     <>
@@ -373,11 +377,34 @@ const Productlayout = () => {
             {/*--------------------------------------- main ------------------------------------*/}
             <div className="grid md:grid-cols-4 grid-cols-2 gap-4 p-2">
               {/* --------------------------------------------------------card-------------------------------------------------  */}
-  {products.length > 0 ? (
-        show
-     ) : (
-        <div>No products found for the selected category.</div>
-      )}
+
+
+  {loader ? (
+  <>
+      <div role="status" className="animate-pulse shadow-lg px-4 py-2 rounded-lg">
+        <div className="shadow-sm">
+          <img
+            src={val.image[0]}
+            className="object-cover"
+            alt="nike image"
+          />
+        </div>
+        <div>
+<h1 className="text-sm md:text-lg font-semibold">{val.brand + " " + val.name}</h1>
+          <p>₹{val.price}</p>
+        </div>
+      </div>
+    </>
+  ) : products.length > 0 ? (
+    show
+  ) : (
+    <div>No products found for the selected category.</div>
+  )}
+
+
+
+
+
                
               {/* end  */}
             </div>
