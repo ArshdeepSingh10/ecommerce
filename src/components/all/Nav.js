@@ -12,7 +12,7 @@ const Nav = () => {
   
   const cartData = sessionStorage.getItem('cartItems');
     const cart = JSON.parse(cartData);
- 
+ const c = cartData.length;
   const done = () =>{
 if(show) {
   setIcone(<FaXmark />);
@@ -24,7 +24,7 @@ if(show) {
 setShow(!show);
   }
   useEffect(() => {
-    const c = cartData.length;
+
     setCarts(c);
   },[cartData]);
   return (
