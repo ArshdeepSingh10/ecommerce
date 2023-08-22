@@ -110,7 +110,7 @@ const [cartVisibilities, setCartVisibilities] = useState(carts.map(() => false))
 
     ))}
     
-
+  </div>
       </div>
       {/*------------------------------------------- product detail ----------------(----------- */}
       <div className='col-span-12 md:col-span-6 '>
