@@ -373,8 +373,11 @@ const Productlayout = () => {
             {/*--------------------------------------- main ------------------------------------*/}
             <div className="grid md:grid-cols-4 grid-cols-2 gap-4 p-2">
               {/* --------------------------------------------------------card-------------------------------------------------  */}
-{show}
-
+  {products.length > 0 ? (
+        show
+     ) : (
+        <div>No products found for the selected category.</div>
+      )}
                
               {/* end  */}
             </div>
