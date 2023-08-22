@@ -21,12 +21,13 @@ if(show) {
 setShow(!show);
   }
 useEffect(() => {
- const cartData = sessionStorage.getItem('cartItems');
+  const cartData = sessionStorage.getItem('cartItems');
   const cart = JSON.parse(cartData);
   const cartLength = cart ? cart.length : 0;
   
   setCarts(cartLength);
-},[JSON.prase(sessionStorage.getItem('cartItems')]));
+}, [sessionStorage.getItem('cartItems')]);
+
 
   return (
     <div className="z-50 sticky top-0 bg-white">
