@@ -8,7 +8,9 @@ const Nav = () => {
   const [show , setShow] = useState(true)
   const [icon , setIcone] = useState(<FaBars/>)
   const [carts , setCarts] = useState(0);
- 
+  const items = useSelector((state) => state.cart);
+ const quantity = items.map((item) => item.qty);
+
 
   const done = () =>{
 if(show) {
@@ -26,7 +28,7 @@ useEffect(() => {
   const cartLength = cart ? cart.length : 0;
   
   setCarts(cartLength);
-}, [sessionStorage.getItem('cartItems')]);
+}, [quantity]);
 
 
   return (
