@@ -13,7 +13,7 @@ const Nav = () => {
  const quantity = items.map((item) => item.quantity);
 
 const handleCategoryClick = () => {
-    setShow(false); // Hide the menu bar when a category link is clicked
+    setShow(!show); // Hide the menu bar when a category link is clicked
   };
   const done = () =>{
 if(show) {
