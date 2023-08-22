@@ -129,7 +129,7 @@ const [loader , setLoader]=useState(true);
 
   const show = handleSearch().map((val) => (
     <>
-      <div role="status" className="animate-pulse shadow-lg px-4 py-2 rounded-lg">
+      <div role="status" className=" shadow-lg px-4 py-2 rounded-lg">
         {/* Image */}
         <div className="shadow-sm">
           <img
@@ -379,19 +379,19 @@ const [loader , setLoader]=useState(true);
               {/* --------------------------------------------------------card-------------------------------------------------  */}
 
 
-  {loader ? (
-  <>
-      <div role="status" className="animate-pulse shadow-lg px-4 py-2 rounded-lg">
-        <div className="shadow-sm">
-         
-        </div>
-        <div>
-<h1 className="text-sm md:text-lg font-semibold"></h1>
-          <p></p>
-        </div>
-      </div>
-    </>
-  ) : products.length > 0 ? (
+  {loader ? Array.from({length:12} ,()=>(
+
+                      <div className="lg:col-span-3 animate-pulse md:col-span-4 grid gap-3 col-span-6   ">
+                                     
+                                     <div  className="object-contain bg-slate-400 h-40 max-w-[188px] "></div>
+                                     
+                                    
+                                     <h2 className="bg-slate-400  rounded h-2.5 w-20"></h2>
+                                     <h2 className="bg-slate-400 rounded h-2.5 w-5"></h2>
+                                     {/* <h3>Product varient {JSON.stringify(productWithVariant[0])}</h3> */}
+                                     </div>
+                      
+                                  )) : products.length > 0 ? (
     show
   ) : (
     <div>No products found for the selected category.</div>
