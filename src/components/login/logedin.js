@@ -6,7 +6,7 @@ const Logedin = () => {
   const navigate = useNavigate();
   const [userdata, setUserdata] = useState({});
   const [order, setOrder] = useState([]);
-  const [loading, setLoading] = useState(true);
+ const [loading, setLoading] = useState(true);
   const name = userdata.name;
   const email = userdata.email;
 // serOrder(orders);
@@ -33,14 +33,14 @@ const user ={
 const order = res.data.orders
 setOrder(order)
 setUserdata(user)
+    setLoading(false);
 console.log(order);
 
 
 }
 else if(res.response.status === 401){
  alert()
-// setShow(true);
-  setLoading(false)
+
 navigate("/login");
 }
 console.log(res);
@@ -50,7 +50,7 @@ console.log(res);
 catch(error){
   if (error.response && error.response.status === 401) {
     // Token not present or invalid, navigate to login
-    setloading(false)
+ 
     navigate("/login");
   }
 // console.log(res);
