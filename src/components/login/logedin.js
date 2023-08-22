@@ -43,8 +43,9 @@ else if(res.response.status === 401){
 navigate("/login");
 }
 console.log(res);
-}
    setIsLoading(false);
+}
+  
 catch(error){
   if (error.response && error.response.status === 401) {
     // Token not present or invalid, navigate to login
