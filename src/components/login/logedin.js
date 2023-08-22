@@ -75,18 +75,18 @@ useEffect(() =>{
     <div>
       <p className="p-4">Home/Account Details</p>
     </div>
-      <div >
+                {loading ? (
+           <div className="flex justify-center items-center h-screen">
+          <FaSpinner className="animate-spin text-gray-600 w-10 h-10" />
+            </div>
+        ) : ( <div >
         <div>
             <p className='text-center text-4xl py-5'>
                 My Account
             </p>
         </div>
         <div className='grid grid-cols-12 gap-6'>
-           {loading ? (
-           <div className="flex justify-center items-center h-screen">
-          <FaSpinner className="animate-spin text-gray-600 w-10 h-10" />
-            </div>
-        ) : (<>  <div className='col-span-12 md:order-none  order-last md:col-span-8'>
+<>  <div className='col-span-12 md:order-none  order-last md:col-span-8'>
                 {/* ----------------------------------------  */}
                <div className='border-b border-black'>
                 <p className='text-3xl'>Order History</p>
@@ -159,9 +159,9 @@ useEffect(() =>{
 </div>
 </div>
             </div>
-          </>)}
+          </>
         </div>
-      </div>
+      </div>)}
     </div>
   )
 }
