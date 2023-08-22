@@ -12,7 +12,7 @@ const Nav = () => {
   
   const cartData = sessionStorage.getItem('cartItems');
     const cart = JSON.parse(cartData);
- const c = cartData.length;
+ const c = cart.length;
   const done = () =>{
 if(show) {
   setIcone(<FaXmark />);
