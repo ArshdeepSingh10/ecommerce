@@ -380,16 +380,14 @@ const [loader , setLoader]=useState(true);
 
 
   {loader ? Array.from({length:12} ,()=>(
-
-                     
-                                     
-                                     <div  className="object-contain bg-slate-400 h-40 max-w-[188px] "></div>
+<div>        
+                           <div  className="object-contain bg-slate-400 h-40 max-w-[188px] "></div>
                                      
                                     
                                      <h2 className="bg-slate-400  rounded h-2.5 w-20"></h2>
                                      <h2 className="bg-slate-400 rounded h-2.5 w-5"></h2>
-                                     {/* <h3>Product varient {JSON.stringify(productWithVariant[0])}</h3> */}
                                   
+   </div>     
                       
                                   )) : products.length > 0 ? (
     show
