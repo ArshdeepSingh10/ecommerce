@@ -3,9 +3,12 @@ import { useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { addToCart } from '../action/action';
 import axios from 'axios';
+import { FaSpinner } from 'react-icons/fa';
+
 // import Addtocartinfo from './Addtocartinfo';
 
 const Product = () => {
+const [isLoadingProduct, setIsLoadingProduct] = useState(true);
 
   const { proid, category } = useParams();
   const dispatch = useDispatch();
@@ -94,9 +97,15 @@ const [cartVisibilities, setCartVisibilities] = useState(carts.map(() => false))
       </div>
 
 {/* ------------------------------------------------ main product card start ------------------------------- */}
- <div className='grid grid-cols-12 gap-4 '>
+{isLoadingProduct ? (
+    <div className="flex justify-center items-center h-96">
+      <FaSpinner className="animate-spin text-gray-600 w-10 h-10" />
+    </div>
+  ) : ( 
+<div className='grid grid-cols-12 gap-4 '>
         {/*------------------------------- image side ----------------------------- */}
       <div className='col-span-12 md:col-span-6 ' >
+   
 {/*------------------------------------------ image div ----------------------------------------- */}
 <div className='  ' id={product._id}>
 <img src= {!product.image ? "": coverimg} alt='nike shoes' className='object-contain' />
@@ -162,7 +171,7 @@ Sku: {product.sku}
 
 
 
-      </div>
+      </div>)}
      <div> 
      { carts.length > 0 && (
              <div className='flex flex-col gap-2 absolute top-0 right-0 z-50 p-3 m-3'>
