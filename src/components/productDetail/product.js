@@ -171,7 +171,8 @@ Sku: {product.sku}
 
 
 
-      </div>)}
+      </div>
+                
      <div> 
      { carts.length > 0 && (
              <div className='flex flex-col gap-2 absolute top-0 right-0 z-50 p-3 m-3'>
@@ -224,7 +225,7 @@ Sku: {product.sku}
      </div>
      
 
-      </div>
+      </div>)}
       </div>
      
       </div>
