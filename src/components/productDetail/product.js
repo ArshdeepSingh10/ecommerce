@@ -94,7 +94,7 @@ const [cartVisibilities, setCartVisibilities] = useState(carts.map(() => false))
 {/*------------------------------------------ navbar ---------------------------------------------------- */}
       <div className='p-4'>
         <h1>
-        Home /<Link to="/:category"> {category}</Link> / {product.name}
+        Home / <Link to={`/${category}`}> {category}</Link> / {product.name}
         </h1>
       </div>
 
