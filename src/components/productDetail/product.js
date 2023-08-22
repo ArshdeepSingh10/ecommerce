@@ -28,8 +28,10 @@ const [isLoadingProduct, setIsLoadingProduct] = useState(true);
       setVarint(othervarient);
       setProduct(foundProduct);
       setCoverimg([foundProduct.image[0]]);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
+      setIsLoading(false);
     }
   };
 const changeimage = (img) =>{
