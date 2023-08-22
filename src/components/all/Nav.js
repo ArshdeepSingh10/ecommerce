@@ -26,7 +26,7 @@ useEffect(() => {
   const cartLength = cart ? cart.length : 0;
   
   setCarts(cartLength);
-},[cartData]);
+},[JSON.prase(sessionStorage.getItem('cartItems')]));
 
   return (
     <div className="z-50 sticky top-0 bg-white">
