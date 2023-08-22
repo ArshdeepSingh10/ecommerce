@@ -6,7 +6,7 @@ const Logedin = () => {
   const navigate = useNavigate();
   const [userdata, setUserdata] = useState({});
   const [order, setOrder] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isloading, setIsLoading] = useState(true);
   const name = userdata.name;
   const email = userdata.email;
 // serOrder(orders);
@@ -40,15 +40,17 @@ console.log(order);
 else if(res.response.status === 401){
  alert()
 // setShow(true);
+  setIsLoading(false)
 navigate("/login");
 }
 console.log(res);
-   setIsLoading(false);
+  
 }
   
 catch(error){
   if (error.response && error.response.status === 401) {
     // Token not present or invalid, navigate to login
+    setIsLoading(false)
     navigate("/login");
   }
 // console.log(res);
@@ -80,7 +82,7 @@ useEffect(() =>{
             </p>
         </div>
         <div className='grid grid-cols-12 gap-6'>
-           {loading ? ( // Display loader if loading state is true
+           {isloading? ( // Display loader if loading state is true
            <div className="flex justify-center items-center h-screen">
         <FaSpinner className="animate-spin text-gray-600 w-10 h-10" />
       </div>
