@@ -27,11 +27,11 @@ const Addproducts = () => {
     formData.append("quantity", quantity);
     formData.append("category", category);
      formData.append("sku", sku);
-   {/* for (let i = 0; i < image.length; i++) {
+    for (let i = 0; i < image.length; i++) {
       formData.append("image",image[i]);
 
       console.log(image[i]);
-    }*/}
+    }
     formData.append("color", color);
     formData.append("size", size);
     formData.append("status", "enable");
