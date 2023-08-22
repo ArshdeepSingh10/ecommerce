@@ -125,7 +125,7 @@ const Productlayout = () => {
 
   const show = handleSearch().map((val) => (
     <>
-      <div className="shadow-lg px-4 py-2 rounded-lg">
+      <div  className="animate-pulse shadow-lg px-4 py-2 rounded-lg">
         {/* Image */}
         <div className="shadow-sm">
           <img
