@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { FaSpinner } from 'react-icons/fa';
 const Logedin = () => {
   const navigate = useNavigate();
   const [userdata, setUserdata] = useState({});
   const [order, setOrder] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const name = userdata.name;
   const email = userdata.email;
 // serOrder(orders);
@@ -43,6 +44,7 @@ navigate("/login");
 }
 console.log(res);
 }
+   setIsLoading(false);
 catch(error){
   if (error.response && error.response.status === 401) {
     // Token not present or invalid, navigate to login
@@ -77,7 +79,11 @@ useEffect(() =>{
             </p>
         </div>
         <div className='grid grid-cols-12 gap-6'>
-            <div className='col-span-12 md:order-none  order-last md:col-span-8'>
+           {loading ? ( // Display loader if loading state is true
+           <div className="flex justify-center items-center h-screen">
+        <FaSpinner className="animate-spin text-gray-600 w-10 h-10" />
+      </div>
+        ) : (  <div className='col-span-12 md:order-none  order-last md:col-span-8'>
                 {/* ----------------------------------------  */}
                <div className='border-b border-black'>
                 <p className='text-3xl'>Order History</p>
@@ -149,7 +155,7 @@ useEffect(() =>{
     </p>
 </div>
 </div>
-            </div>
+            </div>)}
         </div>
       </div>
     </div>
