@@ -177,7 +177,7 @@ Sku: {product.sku}
                 
      <div> 
      { carts.length > 0 && (
-             <div className='flex flex-col gap-2 absolute top-0 right-0 z-50 p-3 m-3'>
+             <div className='flex flex-col gap-2 fixed top-0 right-0 z-50 p-3 m-3'>
 
          {carts.map((val ,index) =>(
             <div  key={index}  className={`${cartVisibilities[index] ? 'block' : 'hidden'}  bg-white border border-black p-4`}>
